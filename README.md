@@ -1,7 +1,7 @@
 # HoN-Announcer-REMADE
 Adds the announcer voice from the Heroes of Newerth game to various player versus player combat actions.
 
-Killing Spree:
+## Killing Spree:
 
 1 - "Blood Lust!"
 
@@ -26,7 +26,7 @@ Killing Spree:
 11 - "Immortal!"
 
 
-Quick Kills:
+## Quick Kills:
 
 2 - "Double Kill!"
 
@@ -35,13 +35,13 @@ Quick Kills:
 4 - "Quad-Kill!"
 
 
-Killing blows while under 5% health:
+## Killing blows while under 5% health:
 
 "Smack Down!"
 
 
 
-Power Ups:
+## Power Ups:
 
 Berserking - "Double Damage!"
 
@@ -50,14 +50,14 @@ Restoration - "Regeneration!"
 Speed - "Haste!"
 
 
-Enter a Battleground or Wintergrasp:
+## Enter a Battleground or Wintergrasp:
 
 "Lets Get It On!"
 
 
-Target Paladin Divine Shields:
+## Target Paladin Divine Shields:
 
 "RAGE QUIT!"
 
-On Death:
+## On Death:
 "Defeat!"
