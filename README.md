@@ -1,8 +1,7 @@
 # HoN-Announcer-REMADE
-Adds the announcer voice from the Heroes of Newerth game to various player versus player combat actions.
+HoN-Announcer is a World of Warcraft addon. It adds the announcer voice from the Heroes of Newerth game to various player versus player combat actions.
 
 ## Instalation
-
 https://www.wowinterface.com/downloads/info25699-HoNAnnouncerREMADE.html
 
 ## Killing Spree
