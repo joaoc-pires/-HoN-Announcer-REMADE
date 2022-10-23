@@ -1,26 +1,38 @@
-local WORLD_WG = "Wintergrasp"
-local WORLD_TB = "Tol Barad"
-local BG_BFG = "The Battle for Gilneas"
-local BG_TP = "Twin Peaks"
-local BG_AB = "Arathi Basin"
-local BG_WG = "Warsong Gulch"
-local BG_WGA = "Silverwing Hold"
-local BG_WGH = "Warsong Lumber Mill"
-local BG_EOTS = "Eye of the Storm"
-local BG_AV = "Alterac Valley"
-local BG_IOC = "Isle of Conquest"
-local BG_SOTA = "Strand of the Ancients"
-local BG_SLVSM = "Silvershard Mines"
-local BG_TOK = "Temple of Kotmogu"
-local BG_DG = "Deepwind Gorge"
-local BG_SHORE = "Seething Shore"
-local ARENA_LORD = "Ruins of Lordaeron"
-local ARENA_NAGRAND = "Nagrand Arena"
-local ARENA_BEM = "Blade's Edge Arena"
-local ARENA_DAL = "Dalaran Arena"
-local ARENA_ROV = "Ring of Valor"
-local ARENA_TOL = "Tol'viron Arena"
-local ARENA_TP = "The Tiger's Peak"
+local PVPZONES = {
+	[1] = "Wintergrasp",
+	[2] = "Tol Barad",
+	[3] = "The Battle for Gilneas",
+	[4] = "Twin Peaks",
+	[5] = "Arathi Basin",
+	[6] = "Warsong Gulch",
+	[7] = "Silverwing Hold",
+	[8] = "Warsong Lumber Mill",
+	[9] = "Eye of the Storm",
+	[10] = "Alterac Valley",
+	[11] = "Isle of Conquest",
+	[12] = "Strand of the Ancients",
+	[13] = "Silvershard Mines",
+	[14] = "Temple of Kotmogu",
+	[15] = "Deepwind Gorge",
+	[16] = "Seething Shore",
+	[17] = "Ruins of Lordaeron",
+	[18] = "Nagrand Arena",
+	[19] = "Blade's Edge Arena",
+	[20] = "Dalaran Arena",
+	[21] = "Ring of Valor",
+	[22] = "Tol'viron Arena",
+	[23] = "The Tiger's Peak",
+	[24] = "Ashamane's Fall",
+	[25] = "Black Rook Hold Arena",
+	[26] = "Hook Point",
+	[27] = "The Mugambala",
+	[28] = "The Robodrome",
+	[29] = "Empyrean Domain",
+	[30] = "Maldraxxus Coliseum",
+	[31] = "Enigma Crucible",
+	[32] = "Nokhudon Proving Grounds",
+	[33] = "Circle of Blood Arena"
+}
 
 local BUFF_BERSERKING = GetSpellInfo(23505)
 local hasBerserking
@@ -131,9 +143,12 @@ end
 
 function HoNAnnouncer:ZONE_CHANGED_NEW_AREA()
 	local zoneText = GetZoneText();
-	if (zoneText == ARENA_TP or zoneText == BG_DG or zoneText == BG_SLVSM or zoneText == BG_TOK or zoneText == ARENA_TOL or zoneText == BG_TP or zoneText == BG_BFG or zoneText == WORLD_TB or zoneText == WORLD_WG or zoneText == BG_AB or zoneText == BG_WG or zoneText == BG_WGA or zoneText == BG_WGH or zoneText == BG_EOTS or zoneText == BG_AV or zoneText == BG_IOC or zoneText == BG_SOTA or zoneText == ARENA_LORD or zoneText == ARENA_NAGRAND or zoneText == ARENA_BEM or zoneText == ARENA_DAL or zoneText == ARENA_ROV or zoneText == BG_SHORE) then
-		PlaySoundFile("Interface\\AddOns\\HoNAnnouncer-Remade\\sounds\\startgame.ogg", "Master")
+	for i,pvpZone in ipairs(PVPZONES) do 
+		if zoneText == pvpZone then
+			PlaySoundFile("Interface\\AddOns\\HoNAnnouncer-Remade\\sounds\\startgame.ogg", "Master")
+		end
 	end
+
 	killStreak = 0
 end
 
